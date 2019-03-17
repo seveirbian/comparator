@@ -22,7 +22,7 @@ var compareCmd = &cobra.Command{
     Long:  `Compares files in two folders to see if it contains files with same content`,
     Args:  cobra.ExactArgs(2),
     Run: func(cmd *cobra.Command, args []string) {
-        comparator, err := compare.Init(args[0], arg[1])
+        comparator, err := compare.Init(args[0], args[1])
         if err != nil {
             logger.Fatal("Fail to init...")
         }
@@ -32,6 +32,6 @@ var compareCmd = &cobra.Command{
             logger.Fatal("Fail to compare...")
         }
 
-        fmt.Printf("Common size: %d\n", comparator.CommonFilesSize)
+        fmt.Printf("Common size: %d bytes\n", comparator.CommonFilesSize)
     },
 }
