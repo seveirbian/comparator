@@ -6,6 +6,8 @@ import (
     "github.com/sirupsen/logrus"
 )
 
+var logger = logrus.WithField("comparator", "compare")
+
 var rootCmd = &cobra.Command{
     Use:   "comparator",
     Short: "Comparator is a tool that compares file in two folders",

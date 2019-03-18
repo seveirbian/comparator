@@ -4,10 +4,7 @@ import (
     "fmt"
     "github.com/spf13/cobra"
     "github.com/seveirbian/comparator/compare"
-    "github.com/sirupsen/logrus"
 )
-
-var logger = logrus.WithField("cmd", "compare")
 
 var compareUsage = `Usage:  comparator compare DIR1 DIR2`
 
